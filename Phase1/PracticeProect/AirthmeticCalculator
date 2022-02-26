@@ -1,0 +1,28 @@
+package unnam.swami;
+import java.util.Scanner;
+public class AirthmeticCalculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in)) {
+			System.out.println("enter the two numbers");
+			int firstnum=sc.nextInt();
+			int secondnum=sc.nextInt();
+			System.out.println("enter the operator");
+			char oper=sc.next().charAt(0);
+			double ans=0;
+			switch(oper) {
+			case '+': ans=firstnum+secondnum;
+			break;
+			case '-': ans=firstnum-secondnum;
+			break;
+			case '*': ans=firstnum*secondnum;
+			break;
+			case '/': ans=firstnum/secondnum;
+			break;
+			}
+			System.out.println("The answer is " +ans);
+		}
+	}
+
+
