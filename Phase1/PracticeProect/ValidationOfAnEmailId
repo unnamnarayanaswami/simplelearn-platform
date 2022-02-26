@@ -1,0 +1,39 @@
+package unnam.swami;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ValidationOfEmail {
+               public static boolean ValidEmail(String email) {
+            	   String regex= "^(.+)@(.+)$"; 
+            	   Pattern pattern= Pattern.compile(regex);
+            	   Matcher matcher = pattern.matcher(email);
+            	   return matcher.matches();
+            	   
+               }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+               List<String> emails = new ArrayList<String>();
+               emails.add("narayana@.com");
+               emails.add("narayanaswami@example.com");
+               emails.add("swami@example.me.org");
+               emails.add("raghu.example.com");
+               emails.add("rahul..bob@example.com");
+               emails.add("rahul@.example.com");
+               
+               for(String value : emails) {
+            	   System.out.println("The Email adress" +value + " is " +(ValidEmail(value)?"valid" : "invalid"));
+               }
+               System.out.println("Enter any  Email adress to check");
+               try (Scanner sc = new Scanner(System.in)) {
+				String input = sc.nextLine();
+				System.out.println("The Email adress" + input + " is " +(ValidEmail(input)?"valid" : "invalid"));
+			}
+
+               
+	}
+
+}
