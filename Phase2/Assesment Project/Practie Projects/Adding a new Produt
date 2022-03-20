@@ -2,7 +2,7 @@ ADDING A NEW PRODUCT IN DATABASE
 
 
 
-package com.hari.training;
+package com.user;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -85,7 +85,7 @@ public class students {
 	
 }
 
-package com.hari.training;
+package com.user;
 
 import java.util.List;
 
